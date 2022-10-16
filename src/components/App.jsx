@@ -1,27 +1,33 @@
-import { fetchTrending, fetchDetails } from 'servise/api';
-import { useState, useEffect } from 'react';
-import { Trending } from 'components/trending/Trending';
+import { HeaderEl } from './header/HeaderEl';
+import { Route, Routes } from 'react-router-dom';
+import { HomePage } from 'pages/HomePage/HomePage';
+import { MoviePage } from 'pages/MoviePage/MoviePage';
+import { FilmDetailsPage } from 'pages/FilmDetailsPage/FilmDetailsPage';
+import { Cast } from 'components/cast/Cast';
+import { Reviews } from './reviews/Reviews';
 
 export const App = () => {
-  const [trendingFilm, setTrendingFilm] = useState([]);
+  // const loadFilms = trendingFilms.length !== 0;
+  // const loadFilm = movie_id !== 0;
 
-  useEffect(() => {
-    const getFilms = async () => {
-      const { results } = await fetchTrending();
-      const data = results.map(({ title, id }) => {
-        return { title, id };
-      });
-      setTrendingFilm(data);
-    };
-
-    getFilms();
-  }, []);
-
-  console.log(trendingFilm);
-
-  fetchDetails(616037).then(data => {});
-
-  const loadFilms = trendingFilm.length !== 0;
-
-  return <div>{loadFilms && <Trending trendingFilm={trendingFilm} />}</div>;
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<HeaderEl />}>
+          <Route index element={<HomePage />} />
+          <Route path="movie" element={<MoviePage />}></Route>
+          <Route path="movie/:movieId" element={<FilmDetailsPage />}>
+            <Route path="cast" element={<Cast />} />
+            <Route path="Revievs" element={<Reviews />} />
+          </Route>
+        </Route>
+      </Routes>
+    </>
+  );
 };
+
+// <HeaderEl/>
+// <div>
+//   {loadFilms && <Trending trendingFilms={trendingFilms} />}
+//   {loadFilm && <Film trendingFilm={trendingFilm} genresFilm={genresFilm} />}
+// </div>
