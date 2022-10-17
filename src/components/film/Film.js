@@ -1,3 +1,5 @@
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+
 export const Film = ({ trendingFilm, genresFilm }) => {
   const { title, release_date, overview, poster_path, vote_average } =
     trendingFilm;
@@ -8,6 +10,9 @@ export const Film = ({ trendingFilm, genresFilm }) => {
 
   return (
     <>
+      <button tupe button>
+        <AiOutlineArrowLeft /> Go back
+      </button>
       <div>
         <img
           src={

@@ -7,8 +7,6 @@ import { Cast } from 'components/cast/Cast';
 import { Reviews } from './reviews/Reviews';
 
 export const App = () => {
-  // const loadFilms = trendingFilms.length !== 0;
-  // const loadFilm = movie_id !== 0;
 
   return (
     <>

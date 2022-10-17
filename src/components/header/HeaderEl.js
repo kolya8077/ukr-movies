@@ -1,14 +1,15 @@
-import { NavLink, Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom"
+import { LinkEl, Header } from 'components/header/headerEL.style.jsx';
 
 export const HeaderEl = () => {
   return (
     <>
-    <header>
+    <Header>
       <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/movie">Movie</NavLink>
+        <LinkEl to="/" end>Home</LinkEl>
+        <LinkEl to="/movie">Movie</LinkEl>
       </nav>
-    </header>
+    </Header>
     <Outlet />
     </>
   )

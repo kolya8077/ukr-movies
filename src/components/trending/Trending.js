@@ -1,20 +1,27 @@
-import { Link } from 'react-router-dom';
+
 import { FilmDetailsPage } from 'pages/FilmDetailsPage/FilmDetailsPage';
+import {
+  Title,
+  List,
+  Item,
+  LinkEl,
+} from 'components/trending/trending.styled.jsx';
+
 
 
 export const Trending = ({ trendingFilms }) => {
   return (
     <>
-      <h2>Trending today</h2>
-      <ul>
+      <Title>Trending today</Title>
+      <List>
         {trendingFilms.map(({ title, id }) => (
-          <li key={title}>
-            <Link to={`movie/${id}`} element={<FilmDetailsPage />}>
+          <Item key={title}>
+            <LinkEl to={`movie/${id}`} element={<FilmDetailsPage />}>
               {title}
-            </Link>
-          </li>
+            </LinkEl>
+          </Item>
         ))}
-      </ul>
+      </List>
     </>
   );
 };
