@@ -1,13 +1,20 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Conteiner, LinkEl, List, Item } from 'components/info/info.style';
+import { Outlet } from 'react-router-dom';
 
 export const Info = () => {
   return (
     <>
-      <p>Additional information</p>
-      <ul>
-        <Link to={'cast'}>Cast</Link>
-        <Link to={'revievs'}>Revievs</Link>
-      </ul>
+      <Conteiner>
+        <p>Additional information</p>
+        <List>
+          <Item>
+            <LinkEl to={'cast'}>Cast</LinkEl>
+          </Item>
+          <Item>
+            <LinkEl to={'revievs'}>Revievs</LinkEl>
+          </Item>
+        </List>
+      </Conteiner>
       <Outlet />
     </>
   );

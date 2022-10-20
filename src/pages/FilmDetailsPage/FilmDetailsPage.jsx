@@ -4,7 +4,7 @@ import { Film } from 'components/film/Film';
 import { useParams } from 'react-router-dom';
 import { Info } from 'components/info/Info';
 
-export const FilmDetailsPage = () => {
+const FilmDetailsPage = () => {
   const { movieId } = useParams();
 
   const [movie_id] = useState(movieId);
@@ -12,14 +12,10 @@ export const FilmDetailsPage = () => {
   const [genresFilm, setGenresFilm] = useState([]);
 
   useEffect(() => {
-    const getFilm = async () => {
-      const detalis = await fetchDetails(movie_id);
-
-      setGenresFilm(detalis.genres);
-      setTrendingFilm(detalis);
-    };
-
-    getFilm();
+    fetchDetails(movie_id).then(e => {
+      setGenresFilm(e.genres);
+      setTrendingFilm(e);
+    });
   }, [movie_id]);
 
   return (
@@ -29,3 +25,5 @@ export const FilmDetailsPage = () => {
     </>
   );
 };
+
+export default FilmDetailsPage;

@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { fetchCast } from "servise/api";
 import { useState, useEffect } from "react";
+import { List, Item, Img, Text } from './cast.style';
 
-
-export const Cast = () => {
+const Cast = () => {
   const { movieId } = useParams();
 
   const [movie_id] = useState(movieId);
@@ -24,10 +24,10 @@ useEffect(() => {
 
   return (
     <>
-      <ul>
+      <List>
         {actors.map(({ character, original_name, profile_path, cast_id }) => (
-          <li key={cast_id}>
-            <img
+          <Item key={cast_id}>
+            <Img
               src={
                 profile_path
                   ? IMG_URL + profile_path
@@ -35,11 +35,13 @@ useEffect(() => {
               }
               alt={original_name}
             />
-            <p>{original_name}</p>
+            <Text>{original_name}</Text>
             <p>Character: {character}</p>
-          </li>
+          </Item>
         ))}
-      </ul>
+      </List>
     </>
   );
 }
+
+export default Cast;
