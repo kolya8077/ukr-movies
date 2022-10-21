@@ -31,7 +31,7 @@ const FilmDetailsPage = () => {
     <>
       {isLoading ? (
         <>
-          {trendingFilm.homepage ? (
+          {trendingFilm.title ? (
             <>
               <Film trendingFilm={trendingFilm} genresFilm={genresFilm} />
               <Info />

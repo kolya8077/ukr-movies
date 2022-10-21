@@ -1,6 +1,6 @@
 import { Container, Input, Button } from 'components/FormEl/formEl.style';
 
-export const FormEl = ({ handleChange, handleSubmit }) => {
+export const FormEl = ({ handleSubmit }) => {
   return (
     <Container>
       <form onSubmit={handleSubmit}>
@@ -9,7 +9,6 @@ export const FormEl = ({ handleChange, handleSubmit }) => {
           name="query"
           autoFocus={true}
           placeholder="Search films"
-          onChange={handleChange}
         />
         <Button type="submit">Search</Button>
       </form>

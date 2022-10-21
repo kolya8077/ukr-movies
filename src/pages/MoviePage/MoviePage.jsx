@@ -13,27 +13,26 @@ const MoviePage = () => {
   const location = useLocation();
   const query = search.get('query') ?? '';
 
-  const handleChange = e => {
-    const { value } = e.currentTarget;
-    setSearch(value !== '' ? { query: value } : {});
-  };
-
   const handleSubmit = e => {
     e.preventDefault();
-    if (query === '') {
+    const form = e.currentTarget 
+    const value = form.query.value;
+    if (value === '') {
       toast.warn('Please specify your query!');
       return;
     }
+        setSearch(value !== '' ? { query: value } : {});
   };
 
   useEffect(() => {
     if (query === '') return;
+
     fetchSearch(query).then(setResultFilm);
   }, [query]);
 
   return (
     <>
-      <FormEl handleChange={handleChange} handleSubmit={handleSubmit} />
+      <FormEl handleSubmit={handleSubmit} />
 
       {query.length > 0 && (
         <Trending trendingFilms={resultFilm} location={location} />
