@@ -5,6 +5,7 @@ import Cast from 'components/cast/Cast';
 import Reviews from './reviews/Reviews';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { NotFound } from './NotFound/NotFound';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 const MoviePage = lazy(() => import('pages/MoviePage/MoviePage'));
@@ -18,11 +19,12 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<HeaderEl />}>
           <Route index element={<HomePage />} />
-          <Route path="movies" element={<MoviePage />}></Route>
+          <Route path="movies" element={<MoviePage />} />
           <Route path="movies/:movieId" element={<FilmDetailsPage />}>
             <Route path="cast" element={<Cast />} />
             <Route path="revievs" element={<Reviews />} />
           </Route>
+          <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
       <ToastContainer theme="colored" position="top-right" autoClose={3000} />

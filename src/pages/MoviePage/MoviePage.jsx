@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { fetchSearch } from 'servise/api';
-import FilmDetailsPage from 'pages/FilmDetailsPage/FilmDetailsPage';
-import { NavLink, useLocation, useSearchParams } from 'react-router-dom';
+// import FilmDetailsPage from 'pages/FilmDetailsPage/FilmDetailsPage';
+// import { NavLink } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
+import { Trending } from 'components/trending/Trending';
+import { FormEl } from 'components/FormEl/FormEl'
 
 const MoviePage = () => {
   const [resultFilm, setResultFilm] = useState([]);
@@ -30,31 +33,10 @@ const MoviePage = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="query"
-          autoFocus={true}
-          placeholder="Search films"
-          onChange={handleChange}
-        />
-        <button type="submit">Search</button>
-      </form>
+      <FormEl handleChange={handleChange} handleSubmit={handleSubmit} />
 
       {query.length > 0 && (
-        <ul>
-          {resultFilm.map(({ title, id }) => (
-            <li key={id}>
-              <NavLink
-                to={`${id}`}
-                element={<FilmDetailsPage />}
-                state={{ from: location }}
-              >
-                {title}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+        <Trending trendingFilms={resultFilm} location={location} />
       )}
     </>
   );

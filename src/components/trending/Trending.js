@@ -1,7 +1,6 @@
 
 import FilmDetailsPage from 'pages/FilmDetailsPage/FilmDetailsPage';
 import {
-  Title,
   List,
   Item,
   LinkEl,
@@ -13,11 +12,10 @@ import {
 export const Trending = ({ trendingFilms, location }) => {
   return (
     <>
-      <Title>Trending today</Title>
       <List>
         {trendingFilms.map(({ title, id }) => (
-          <Item key={title}>
-            <LinkEl to={`movies/${id}`} state={{from: location}}  element={<FilmDetailsPage />}>
+          <Item key={id}>
+            <LinkEl to={`/movies/${id}`} state={{from: location}}  element={<FilmDetailsPage />}>
               {title}
             </LinkEl>
           </Item>
