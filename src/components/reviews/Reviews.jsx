@@ -30,17 +30,19 @@ const Reviews = () => {
             <List>
               {reviews.map(({ author, content, id }) => (
                 <Item key={id}>
-                  <Title>Author {author}.</Title>
+                  <Title>Автор {author}.</Title>
                   <p>{content}</p>
                 </Item>
               ))}
             </List>
           ) : (
-            <Worning>We don't have any reviews for this movie.</Worning>
+            <Worning>
+              До цього фільму ще немає жодної рецензії.
+            </Worning>
           )}
         </>
       ) : (
-        <Loading>Loading...</Loading>
+        <Loading>Завнтаження...</Loading>
       )}
     </>
   );

@@ -39,12 +39,12 @@ const Cast = () => {
                 alt={original_name}
               />
               <Text>{original_name}</Text>
-              <p>Character: {character}</p>
+              <p>Характер: {character}</p>
             </Item>
           ))}
         </List>
       ) : (
-        <Loading>Loading...</Loading>
+        <Loading>Завантаження...</Loading>
       )}
     </>
   );

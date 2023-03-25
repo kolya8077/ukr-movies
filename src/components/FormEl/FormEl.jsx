@@ -1,16 +1,26 @@
-import { Container, Input, Button } from 'components/FormEl/formEl.style';
+import {
+  Container,
+  Input,
+  // Button
+} from 'components/FormEl/formEl.style';
 
-export const FormEl = ({ handleSubmit }) => {
+export const FormEl = ({
+  // handleSubmit,
+  handleChange,
+}) => {
   return (
     <Container>
-      <form onSubmit={handleSubmit}>
+      <form
+      // onSubmit={handleSubmit}
+      >
         <Input
           type="text"
           name="query"
           autoFocus={true}
-          placeholder="Search films"
+          placeholder="Пошук фільму"
+          onChange={handleChange}
         />
-        <Button type="submit">Search</Button>
+        {/* <Button type="submit">Пошук</Button> */}
       </form>
     </Container>
   );

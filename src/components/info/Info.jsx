@@ -5,13 +5,13 @@ export const Info = () => {
   return (
     <>
       <Conteiner>
-        <p>Additional information</p>
+        <p>Додаткова інформація</p>
         <List>
           <Item>
-            <LinkEl to={'cast'}>Cast</LinkEl>
+            <LinkEl to={'cast'}>Акторський склад</LinkEl>
           </Item>
           <Item>
-            <LinkEl to={'revievs'}>Revievs</LinkEl>
+            <LinkEl to={'revievs'}>Рев'ю</LinkEl>
           </Item>
         </List>
       </Conteiner>

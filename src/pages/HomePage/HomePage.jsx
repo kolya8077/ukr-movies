@@ -19,12 +19,12 @@ const HomePage = () => {
   return (
     <>
       <div>
-        <Title>Trending today</Title>
+        <Title>В тренді сьогодні</Title>
 
         {isLoading ? (
           <Trending trendingFilms={trendingFilms} location={location} />
         ) : (
-          <Loading> Loading... </Loading>
+          <Loading> Завантаження... </Loading>
         )}
       </div>
     </>

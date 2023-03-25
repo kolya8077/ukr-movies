@@ -9,12 +9,12 @@ export const HeaderEl = () => {
       <Header>
         <nav>
           <LinkEl to="/" end>
-            Home
+            Домівка
           </LinkEl>
-          <LinkEl to="/movies">Movie</LinkEl>
+          <LinkEl to="/movies">Пошук за назвою</LinkEl>
         </nav>
       </Header>
-      <Suspense fallback={<Loading>Loading...</Loading>}>
+      <Suspense fallback={<Loading>Завантаження...</Loading>}>
         <Outlet />
       </Suspense>
     </>

@@ -25,7 +25,7 @@ export const Film = ({ trendingFilm, genresFilm }) => {
       <Container>
         <Link to={backPage}>
           <Button type="button" to="/">
-            <AiOutlineArrowLeft /> Go back
+            <AiOutlineArrowLeft /> Повернутись назад
           </Button>
           {/* <AiOutlineArrowLeft /> Go back */}
         </Link>
@@ -44,10 +44,10 @@ export const Film = ({ trendingFilm, genresFilm }) => {
             <h2>
               {title} ({year})
             </h2>
-            <p>User Score: {`${(vote_average * 10).toFixed(0)}`}%</p>
-            <h3>Overview</h3>
+            <p>Оцінка користувача: {`${(vote_average * 10).toFixed(0)}`}%</p>
+            <h3>Огляд</h3>
             <p>{overview}</p>
-            <h4>Genres</h4>
+            <h4>Жанр</h4>
             <p>{genresFilm.map(({ name }) => name).join(' / ')}</p>
           </Box>
         </BoxItem>

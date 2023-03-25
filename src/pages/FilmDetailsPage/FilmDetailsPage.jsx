@@ -1,4 +1,4 @@
-import { fetchDetails } from 'servise/api';
+ import { fetchDetails } from 'servise/api';
 import { useState, useEffect } from 'react';
 import { Film } from 'components/film/Film';
 import { useParams } from 'react-router-dom';
@@ -41,7 +41,7 @@ const FilmDetailsPage = () => {
           )}
         </>
       ) : (
-        <Loading>Loading...</Loading>
+        <Loading>Завантаження...</Loading>
       )}
     </>
   );
