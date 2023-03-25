@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/ukr-movies/static/css/main.61ffcdf5.css",
-    "main.js": "/ukr-movies/static/js/main.f86328a4.js",
-    "static/js/680.4fa00bfd.chunk.js": "/ukr-movies/static/js/680.4fa00bfd.chunk.js",
-    "static/js/98.b553b8b7.chunk.js": "/ukr-movies/static/js/98.b553b8b7.chunk.js",
-    "static/js/643.180f840e.chunk.js": "/ukr-movies/static/js/643.180f840e.chunk.js",
+    "main.css": "/ukr-movies/static/css/main.ecd051bd.css",
+    "main.js": "/ukr-movies/static/js/main.d89e832e.js",
+    "static/js/680.b5455255.chunk.js": "/ukr-movies/static/js/680.b5455255.chunk.js",
+    "static/js/98.66f18838.chunk.js": "/ukr-movies/static/js/98.66f18838.chunk.js",
+    "static/js/643.c68183fd.chunk.js": "/ukr-movies/static/js/643.c68183fd.chunk.js",
     "static/js/134.06bab621.chunk.js": "/ukr-movies/static/js/134.06bab621.chunk.js",
     "index.html": "/ukr-movies/index.html",
-    "main.61ffcdf5.css.map": "/ukr-movies/static/css/main.61ffcdf5.css.map",
-    "main.f86328a4.js.map": "/ukr-movies/static/js/main.f86328a4.js.map",
-    "680.4fa00bfd.chunk.js.map": "/ukr-movies/static/js/680.4fa00bfd.chunk.js.map",
-    "98.b553b8b7.chunk.js.map": "/ukr-movies/static/js/98.b553b8b7.chunk.js.map",
-    "643.180f840e.chunk.js.map": "/ukr-movies/static/js/643.180f840e.chunk.js.map",
+    "main.ecd051bd.css.map": "/ukr-movies/static/css/main.ecd051bd.css.map",
+    "main.d89e832e.js.map": "/ukr-movies/static/js/main.d89e832e.js.map",
+    "680.b5455255.chunk.js.map": "/ukr-movies/static/js/680.b5455255.chunk.js.map",
+    "98.66f18838.chunk.js.map": "/ukr-movies/static/js/98.66f18838.chunk.js.map",
+    "643.c68183fd.chunk.js.map": "/ukr-movies/static/js/643.c68183fd.chunk.js.map",
     "134.06bab621.chunk.js.map": "/ukr-movies/static/js/134.06bab621.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.61ffcdf5.css",
-    "static/js/main.f86328a4.js"
+    "static/css/main.ecd051bd.css",
+    "static/js/main.d89e832e.js"
   ]
 }
