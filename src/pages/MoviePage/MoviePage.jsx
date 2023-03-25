@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import { fetchSearch } from 'servise/api';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { Trending } from 'components/trending/Trending';
